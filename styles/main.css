@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Nerko One';
+  src: url('https://fonts.googleapis.com/css2?family=Nerko+One');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Varela Round';
+  src: url('https://fonts.googleapis.com/css2?family=Varela+Round');
+  font-weight: 600;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif;
+}
+
+/* header {
+  margin-left: 1.5%;
+}
+
+main {
+  margin-left: 2.5%;
+ font-family: Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+
+footer {
+  margin-left: 1%;
+} */
+
+.nerko {
+  font-family: 'Nerko One', cursive;
+  font-size: 1.2rem;
+}
+
+.varela {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.2rem;
+}
+
+.emoji {
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
