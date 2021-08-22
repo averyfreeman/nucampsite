@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
@@ -31,4 +32,40 @@ footer {
   padding: 50px 0;
   border-bottom: 1px ridge;
   min-height: 200px;
+}
+
+.b {
+  font-size: 1.2rem;
+  font-weight: 750;
+}
+
+.copy-date {
+  opacity: 0.3;
+  transition: all 2s ease;
+}
+
+.copy-date:hover {
+  cursor: help;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.copy-sign {
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .copy-sign {
+    animation: copy-sign-rotate infinite 10s linear;
+  }
+}
+
+@keyframes copy-sign-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

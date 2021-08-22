@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link
+    <!-- <link
       href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -80,35 +80,56 @@
       </div>
     </div>
 
+    
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-4 col-sm-4 offset-1">
+          <div class="col-4 col-sm-2 offset-1">
             <h5>Links</h5>
             <ul class="list-unstyled">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Sites</a></li>
-              <li><a href="#">Contact</a></li>
+              <li class=""><a href="./index.html">Home</a></li>
+              <li class=""><a href="#">About</a></li>
+              <li class=""><a href="#">Sites</a></li>
+              <li class=""><a href="#">Contact</a></li>
             </ul>
           </div>
-          <div class="col-6 col-sm-5 text-center">
+
+          <div class="col-6 col-sm-5">
             <h5>Social</h5>
-            <a href="http://instagram.com/">Instagram</a>
-            <a href="http://facebook.com/">Facebook</a>
-            <a href="http://twitter.com/">Twitter</a>
-            <a href="http://youtube.com/">YouTube</a>
+            <ul class="list-unstyled">
+              <a href="http://instagram.com/">Instagram</a>
+              <a href="http://facebook.com/">Facebook</a>
+              <a href="http://twitter.com/">Twitter</a>
+              <a href="http://youtube.com/">YouTube</a>
+            </ul>
           </div>
-          <div class="col-sm-4 text-center">
-            Tel: 1-206-555-1234<br />
-            Email: campsites@nucamp.co
+
+          <div class="col-sm-4">
+            Tel: <a href=tel:"206-555-1234">+1 (206) 555-1234</a><br />
+            Email: <a href="mailto:campsites@nucamp.co">campsites@nucamp.co</a>
           </div>
         </div>
       </div>
+
+        <span class="text-center">
+        <h5 class="copy-date ">
+        <span class="copy-sign mt-3 align-text-bottom">
+          &copy; 
+        </span>
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          epileptic jellyfish
+        </h5>
+      </span>
     </footer>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
+    ></script>
   </body>
 </html>
