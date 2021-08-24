@@ -5,10 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <!-- <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
-      rel="stylesheet"
-    /> -->
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,13 +30,15 @@
       </div>
     </header>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" role="navigation">
       <div class="container">
         <button
           class="navbar-toggler ml-auto"
           type="button"
           data-toggle="collapse"
           data-target="#nucampNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,7 +47,7 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item active"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">About<span class="sr-only">(current)</span></a></li>
             <li class="nav-item"><a class="nav-link" href="#">Sites</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
           </ul>
@@ -54,17 +55,19 @@
       </div>
     </nav>
 
-    <div class="container mb-3">
+<!--<div class="container mb-3">
       <div class="row">
-        <div class="col">
-          <ol class="breadcrumb">
+        <div class="col"> -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
               <li class="breadcrumb-item active">About</li>
             </ol>
-        </div>
+          </nav>
+  <!--  </div>
       </div>
-    </div>
-
+    </div> -->
+        
     <div class="container">
       <div class="row">
         <div class="col">
@@ -161,9 +164,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
-    ></script>
+    <script src="node_modules/mdbootstrap/js/mdb.min.js"></script>
   </body>
 </html>
