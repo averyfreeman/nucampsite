@@ -1,188 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <!-- <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
+	<head>
+		<!-- Required meta tags always come first -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+		<!-- <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
     <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" /> -->
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>NuCamp: A Better Way To Camp</title>
-  </head>
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+		<!-- Google Fonts Preloader -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- Swap fonts if gfonts not loaded -->
+		<link rel="preload" as="style" href="$CSS&display=swap" />
+		<link
+			href="$CSS&display=swap"
+			media="print"
+			onload="this.media='all'"
+			rel="stylesheet"
+		/>
+		<!-- Now load the actual gfonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>NuCamp: A Better Way To Camp</title>
+	</head>
+	<body>
+		<header class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h1>NuCamp</h1>
+						<h2>a better way to camp</h2>
+					</div>
+				</div>
+			</div>
+		</header>
 
-  <body>
-    <header class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h1>NuCamp</h1>
-            <h2>a better way to camp</h2>
-          </div>
-        </div>
-      </div>
-    </header>
+		<nav class="navbar navbar-expand-sm navbar-dark sticky-top" role="navigation">
+			<div class="container-fluid">
+				<button
+					class="navbar-toggler ml-auto"
+					type="button"
+					data-toggle="collapse"
+					data-target="#nucampNavbar"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="nucampNavbar" class="collapse navbar-collapse">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">
+								<i class="fa fa-home fa-lg"></i>
+								Home
+							</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="#">
+								<i class="fa fa-info fa-lg"></i>
+								About
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="fa fa-list fa-lg"></i>
+								Sites
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<i class="fa fa-address-card fa-lg"></i>
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" role="navigation">
-      <div class="container">
-        <button
-          class="navbar-toggler ml-auto"
-          type="button"
-          data-toggle="collapse"
-          data-target="#nucampNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="nucampNavbar" class="collapse navbar-collapse">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <i class="fa fa-home fa-lg"></i>
-                &nbsp; Home
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                <i class="fa fa-info fa-lg"></i>
-                &nbsp; About
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa fa-list fa-lg"></i>
-                &nbsp; Sites
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fa fa-address-card fa-lg"></i>
-                &nbsp; Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-<!--<div class="container mb-3">
+		<!-- This responsive row was in video but not outline nor bootstrap documentation - I think it looks better without it, personally... -->
+		<!--<div class="container mb-3">
       <div class="row">
         <div class="col"> -->
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active">About</li>
-            </ol>
-          </nav>
-  <!--  </div>
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				<li class="breadcrumb-item active">About</li>
+			</ol>
+		</nav>
+		<!--  </div>
       </div>
     </div> -->
-        
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2>About Us</h2>
-          <hr />
-        </div>
-      </div>
 
-      <div class="row row-content">
-        <div class="col col-sm-6">
-          <h3>Our Mission</h3>
-          <p class="">
-            We present a curated database of the best campsites in the vast woods and
-            backcountry of the World Wide Web Wilderness. We increase access to adventure
-            for the public while promoting safe and respectful use of resources. The
-            expert wilderness trekkers on our staff personally verify each campsite to
-            make sure that they are up to our standards. We also present a platform for
-            campers to share reviews on campsites they have visited with each other.
-          </p>
-        </div>
-      </div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h2>About Us</h2>
+					<hr />
+				</div>
+			</div>
 
-      <div class="row row-content">
-        <div class="col">
-          <h3>Community Partners</h3>
-          <h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
-          <p class="d-none d-sm-block">
-            Bootstrap Outfitters supplies you with the gear you need at prices you can't
-            beat.
-          </p>
-          <h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
-          <p class="d-none d-sm-block">
-            Join Git Out Expeditions to explore new horizons with a group of other
-            adventurers!
-          </p>
-          <h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></h4>
-          <p class="d-none d-sm-block">
-            Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly
-            Shop.
-          </p>
-          <h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
-          <p class="d-none d-sm-block">
-            From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will
-            be sure to get you covered.
-          </p>
-        </div>
-      </div>
-    </div>
+			<div class="row row-content">
+				<div class="col col-sm-6">
+					<h3>Our Mission</h3>
+					<p class="">
+						We present a curated database of the best campsites in the vast woods and
+						backcountry of the World Wide Web Wilderness. We increase access to adventure
+						for the public while promoting safe and respectful use of resources. The
+						expert wilderness trekkers on our staff personally verify each campsite to
+						make sure that they are up to our standards. We also present a platform for
+						campers to share reviews on campsites they have visited with each other.
+					</p>
+				</div>
+				<div class="col-sm-6">
+					<div class="card">
+						<h3 class="card-header bg-primary text-white">Facts At a Glance</h3>
+						<!-- I tried bg-light here and like matching it with table below -->
+						<!-- <div class="card-body bg-light"> -->
+						<div class="card-body">
+							<dl class="row">
+								<dt class="col-6">Founded</dt>
+								<dd class="col-6">February 3, 2016</dd>
+								<dt class="col-6">No. of Campsites in 2019</dt>
+								<dd class="col-6">563</dd>
+								<dt class="col-6">No. of Reviews in 2019</dt>
+								<dd class="col-6">4388</dd>
+								<dt class="col-6">Employees</dt>
+								<dd class="col-6">42</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card bg-light-mt3">
+						<blockquote class="blockquote card-body">
+							<p class="mb-0">
+								I will not follow where the path may lead, but I will go where there is no
+								path, and I will leave a trail.
+							</p>
+							<footer class="blockquote-footer">
+								Muriel Strode,
+								<cite title="Source Title">
+									"Wind-Wafted Wild Flowers" - The Open Court, 1903
+								</cite>
+							</footer>
+						</blockquote>
+					</div>
+				</div>
+			</div>
 
-    
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-4 col-sm-2 offset-1">
-            <h5>Links</h5>
-            <ul class="list-unstyled">
-              <li class=""><a href="./index.html">Home</a></li>
-              <li class=""><a href="#">About</a></li>
-              <li class=""><a href="#">Sites</a></li>
-              <li class=""><a href="#">Contact</a></li>
-            </ul>
-          </div>
+			<div class="row row-content">
+				<div class="col">
+					<h3>Community Partners</h3>
+					<h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
+					<p class="d-none d-sm-block">
+						Bootstrap Outfitters supplies you with the gear you need at prices you can't
+						beat.
+					</p>
+					<h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
+					<p class="d-none d-sm-block">
+						Join Git Out Expeditions to explore new horizons with a group of other
+						adventurers!
+					</p>
+					<h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></h4>
+					<p class="d-none d-sm-block">
+						Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly
+						Shop.
+					</p>
+					<h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
+					<p class="d-none d-sm-block">
+						From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will
+						be sure to get you covered.
+					</p>
+				</div>
+			</div>
 
-          <div class="col-6 col-sm-5">
-            <h5>Social</h5>
-            <ul class="list-unstyled">
-              <a href="http://instagram.com/">Instagram</a>
-              <a href="http://facebook.com/">Facebook</a>
-              <a href="http://twitter.com/">Twitter</a>
-              <a href="http://youtube.com/">YouTube</a>
-            </ul>
-          </div>
+			<div class="row row-content">
+				<div class="col-sm-6">
+					<h2>Facts &amp; Figures</h2>
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<tr class="bg-primary text-light">
+									<th scope="row"></th>
+									<th>2016</th>
+									<th>2017</th>
+									<th>2018</th>
+								</tr>
+							</thead>
+							<!-- I think bg-light color looks nice here matched with card-body bg-light above -->
+							<!-- <tbody class="table-light"> -->
+							<tbody class="table-primary">
+								<tr>
+									<th scope="row">Staff Wilderness Experts</th>
+									<td>10</td>
+									<td>20</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<th scope="row">New Campers</th>
+									<td>256</td>
+									<td>1,280</td>
+									<td>5,360</td>
+								</tr>
+								<tr>
+									<th scope="row">Square Miles Covered</th>
+									<td>101,325</td>
+									<td>423,000</td>
+									<td>~3,000,000,000</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
 
-          <div class="col-sm-4">
-            Tel: <a href=tel:"206-555-1234">+1 (206) 555-1234</a><br />
-            Email: <a href="mailto:campsites@nucamp.co">campsites@nucamp.co</a>
-          </div>
-        </div>
-      </div>
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-4 col-sm-2 offset-1">
+						<h5>Links</h5>
+						<ul class="list-unstyled">
+							<li class=""><a href="./index.html">Home</a></li>
+							<li class=""><a href="#">About</a></li>
+							<li class=""><a href="#">Sites</a></li>
+							<li class=""><a href="#">Contact</a></li>
+						</ul>
+					</div>
 
-        <span class="text-center">
-        <h5 class="copy-date ">
-        <span class="copy-sign mt-3 align-text-bottom">
-          &copy; 
-        </span>
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          epileptic jellyfish
-        </h5>
-      </span>
-    </footer>
+					<div class="col-6 col-sm-5 text-center">
+						<h5>Social</h5>
+						<ul class="list-unstyled">
+							<a href="http://instagram.com/"><i class="fa fa-instagram fa-lg"></i></a>
+							<a href="http://facebook.com/"><i class="fa fa-facebook fa-lg"></i></a>
+							<a href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+							<a href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+						</ul>
+					</div>
 
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- <script src="node_modules/mdbootstrap/js/mdb.min.js"></script> -->
-  </body>
+					<div class="col-sm-4 text-center">
+						<a href="tel:2065551234" aria-label="2 0 6. 5 5 5.1 2 3 4.">
+							Tel: +1 (206) 555-1234</a
+						>
+						<br />
+						Email:
+						<a
+							href="mailto:campsites@nucamp.co"
+							aria-label="Contact nucamp campsites via email"
+							>campsites@nucamp.co</a
+						>
+					</div>
+				</div>
+			</div>
+
+			<span class="text-center">
+				<h5 class="copy-date">
+					<span class="copy-sign mt-3 align-text-bottom"> &copy; </span>
+					<script>
+						document.write(new Date().getFullYear());
+					</script>
+					epileptic jellyfish
+				</h5>
+			</span>
+		</footer>
+
+		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- <script src="node_modules/mdbootstrap/js/mdb.min.js"></script> -->
+	</body>
 </html>

@@ -1,173 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
-    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>NuCamp: A Better Way To Camp</title>
-  </head>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+		<!-- this is material design bootstrap add-on, was checking it out for fun -->
+		<!-- <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
+		<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" /> -->
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+		<!-- Google Fonts Preloader -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- Swap fonts if gfonts not loaded -->
+		<link rel="preload" as="style" href="$CSS&display=swap" />
+		<link
+			href="$CSS&display=swap"
+			media="print"
+			onload="this.media='all'"
+			rel="stylesheet"
+		/>
+		<!-- Now load the actual gfonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>NuCamp: A Better Way To Camp</title>
+	</head>
+	<body>
+		<header class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<!-- I was told to use .container here during grading, but I think it looks better with .container-fluid - just my $0.02! -->
+				<div class="row">
+					<div class="col">
+						<h1>NuCamp</h1>
+						<h2>a better way to camp</h2>
+					</div>
+				</div>
+			</div>
+		</header>
 
-  <body>
-    <header class="jumbotron">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <h1>NuCamp</h1>
-            <h2>a better way to camp</h2>
-          </div>
-        </div>
-      </div>
-    </header>
+		<nav class="navbar navbar-expand-sm navbar-dark sticky-top" role="navigation">
+			<div class="container-fluid">
+				<button
+					class="navbar-toggler ml-auto"
+					type="button"
+					data-toggle="collapse"
+					data-target="#nucampNavbar"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div id="nucampNavbar" class="collapse navbar-collapse">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html"
+								><i class="fa fa-home fa-lg"></i> Home<span class="sr-only"
+									>(current)</span
+								></a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="aboutus.html"
+								><i class="fa fa-info fa-lg"></i> About</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#"
+								><i class="fa fa-address-card fa-lg"></i> Contact</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" role="navigation">
-      <div class="container">
-        <button
-          class="navbar-toggler ml-auto"
-          type="button"
-          data-toggle="collapse"
-          data-target="#nucampNavbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="nucampNavbar" class="collapse navbar-collapse">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html"
-                ><i class="fa fa-home fa-lg"></i> Home<span class="sr-only"
-                  >(current)</span
-                ></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aboutus.html"
-                ><i class="fa fa-info fa-lg"></i> About</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><i class="fa fa-address-card fa-lg"></i> Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+		<!-- <nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item active">Home &nbsp;</li>
+			</ol>
+		</nav> -->
 
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item active">Home &nbsp;</li>
-      </ol>
-    </nav>
+		<main class="container">
+			<section id="content-one">
+				<div class="row row-content align-items-center">
+					<div class="col-sm-4 order-sm-last col-md-3">
+						<h2 class="text-sm-right">Discover & Review</h2>
+					</div>
+					<div class="col">
+						<h3>Our Campsites</h3>
+						<p>
+							Explore our growing database of curated campsites and leave your own
+							reviews!
+						</p>
+					</div>
+				</div>
+			</section>
 
-    <main class="container">
-      <section id="content-one">
-        <div class="row row-content align-items-center">
-          <div class="col-sm-4 order-sm-last col-md-3">
-            <h2 class="text-sm-right">Discover & Review</h2>
-          </div>
-          <div class="col">
-            <h3>Our Campsites</h3>
-            <p>
-              Explore our growing database of curated campsites and leave your own
-              reviews!
-            </p>
-          </div>
-        </div>
-      </section>
+			<section id="content-two">
+				<div class="row row-content align-items-center">
+					<div class="col-sm-4 col-md-3">
+						<h2>Featured Campsites</h2>
+					</div>
+					<div class="col">
+						<h3>React Lake Campground</h3>
+						<p>
+							Nestled in the foothills of the Chrome Mountains, this campground on the
+							shores of the pristine React Lake is a favorite for fly fishers.
+						</p>
+					</div>
+				</div>
+			</section>
 
-      <section id="content-two">
-        <div class="row row-content align-items-center">
-          <div class="col-sm-4 col-md-3">
-            <h2>Featured Campsites</h2>
-          </div>
-          <div class="col">
-            <h3>React Lake Campground</h3>
-            <p>
-              Nestled in the foothills of the Chrome Mountains, this campground on the
-              shores of the pristine React Lake is a favorite for fly fishers.
-            </p>
-          </div>
-        </div>
-      </section>
+			<section id="content-three">
+				<div class="row row-content align-items-center">
+					<div class="col-sm-4 order-sm-last col-md-3">
+						<h2 class="text-sm-right">Our Community Partners</h2>
+					</div>
+					<div class="col">
+						<h3>Bootstrap Outfitters</h3>
+						<p>
+							Bootstrap Outfitters supplies you with gear you need at prices you can't
+							beat.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
 
-      <section id="content-three">
-        <div class="row row-content align-items-center">
-          <div class="col-sm-4 order-sm-last col-md-3">
-            <h2 class="text-sm-right">Our Community Partners</h2>
-          </div>
-          <div class="col">
-            <h3>Bootstrap Outfitters</h3>
-            <p>
-              Bootstrap Outfitters supplies you with gear you need at prices you can't
-              beat.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-4 col-sm-2 offset-1 text-center">
+						<h5>Links</h5>
+						<ul class="list-unstyled">
+							<li class=""><a href="#">Home</a></li>
+							<li class=""><a href="./aboutus.html">About</a></li>
+							<li class=""><a href="#">Sites</a></li>
+							<li class=""><a href="#">Contact</a></li>
+						</ul>
+					</div>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-4 col-sm-2 offset-1 text-center">
-            <h5>Links</h5>
-            <ul class="list-unstyled">
-              <li class=""><a href="#">Home</a></li>
-              <li class=""><a href="./aboutus.html">About</a></li>
-              <li class=""><a href="#">Sites</a></li>
-              <li class=""><a href="#">Contact</a></li>
-            </ul>
-          </div>
+					<div class="col-6 col-sm-5 text-center">
+						<h5>Social</h5>
+						<ul class="list-unstyled">
+							<a href="http://instagram.com/"><i class="fa fa-instagram fa-lg"></i></a>
+							<a href="http://facebook.com/"><i class="fa fa-facebook fa-lg"></i></a>
+							<a href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+							<a href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+						</ul>
+					</div>
 
-          <div class="col-6 col-sm-5 text-center">
-            <h5>Social</h5>
-            <ul class="list-unstyled">
-              <a href="http://instagram.com/"><i class="fa fa-instagram fa-lg"></i></a>
-              <a href="http://facebook.com/"><i class="fa fa-facebook fa-lg"></i></a>
-              <a href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-              <a href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-            </ul>
-          </div>
+					<div class="col-sm-4 text-center">
+						<a href="tel:2065551234" aria-label="2 0 6. 5 5 5.1 2 3 4.">
+							Tel: +1 (206) 555-1234</a
+						>
+						<br />
+						Email:
+						<a
+							href="mailto:campsites@nucamp.co"
+							aria-label="Contact nucamp campsites via email"
+							>campsites@nucamp.co</a
+						>
+					</div>
+				</div>
+			</div>
 
-          <div class="col-sm-4 text-center">
-            Tel: 1-206-555-1234<br />
-            Email: <a href="mailto:campsites@nucamp.co">campsites@nucamp.co</a>
-          </div>
-        </div>
-      </div>
+			<span class="text-center">
+				<h5 class="copy-date">
+					<span class="copy-sign mt-3 align-text-bottom"> &copy; </span>
+					<script>
+						document.write(new Date().getFullYear());
+					</script>
+					epileptic jellyfish
+				</h5>
+			</span>
+		</footer>
 
-      <span class="text-center">
-        <h5 class="copy-date">
-          <span class="copy-sign mt-3 align-text-bottom"> &copy; </span>
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          epileptic jellyfish
-        </h5>
-      </span>
-    </footer>
-
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
-    ></script>
-  </body>
+		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script> -->
+	</body>
 </html>

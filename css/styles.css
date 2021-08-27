@@ -1,73 +1,81 @@
 body {
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-  overflow-x: hidden;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Lobster', cursive;
+	font-family: 'Lobster', cursive;
 }
 
 h2 {
-  color: #3046c5;
+	color: #3046c5;
 }
 
 header h2 {
-  color: #cec8ff;
+	color: #cec8ff;
 }
 
-footer {
-  background-image: linear-gradient(#cec8ff, white);
-  padding: 20px 0;
+/* was experimenting with some table properties in the MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr */
+/* table {
+	border: 1px solid black;
+	font: 1rem 'Open Sans', Helvetica, Arial, sans-serif;
+	border-spacing: 0;
+	border-collapse: collapse;
+} */
+
+.site-footer {
+	background-image: linear-gradient(#cec8ff, white);
+	padding: 20px 0;
 }
 
 .jumbotron {
-  padding: 30px;
-  background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
-  border-radius: 0px;
-  color: white;
-  margin: 0;
+	padding: 30px;
+	background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
+	border-radius: 0px;
+	color: white;
+	margin: 0;
 }
 
 .navbar {
-  background-color: #901cad;
+	background-color: #901cad;
 }
 
 .row-content {
-  padding: 50px 0;
-  border-bottom: 1px ridge;
-  min-height: 200px;
+	padding: 50px 0;
+	border-bottom: 1px ridge;
+	min-height: 200px;
 }
 
 .copy-date {
-  opacity: 0.3;
-  transition: all 2s ease;
+	opacity: 0.3;
+	transition: all 2s ease;
 }
 
 .copy-date:hover {
-  cursor: help;
-  opacity: 1;
-  transform: scale(1.2);
+	cursor: help;
+	opacity: 1;
+	transform: scale(1.2);
 }
 
 .copy-sign {
-  box-sizing: border-box;
-  display: inline-block;
+	box-sizing: border-box;
+	display: inline-block;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .copy-sign {
-    animation: copy-sign-rotate infinite 10s linear;
-  }
+	.copy-sign {
+		animation: copy-sign-rotate infinite 10s linear;
+	}
 }
 
 @keyframes copy-sign-rotate {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
