@@ -50,6 +50,9 @@ header h2 {
 }
 
 .copy-date {
+	/* margin-top: 1rem;
+	position: absolute;
+	left: 30%; */
 	opacity: 0.3;
 	transition: all 2s ease;
 }
@@ -64,6 +67,12 @@ header h2 {
 	box-sizing: border-box;
 	display: inline-block;
 }
+
+/* @media (min-width: 576px) {
+	.copy-date {
+		left: auto;
+	}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
 	.copy-sign {

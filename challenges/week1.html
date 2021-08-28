@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			crossorigin="anonymous"
+		/>
+		<title>NuCamp: A Better Way To Camp</title>
+	</head>
+
+	<body>
+		<p>
+			This viewport size is currently: <span id="viewport-size"></span>
+			<span id="breakpointName"></span>
+		</p>
+		<p>
+			Breakpoints: Extra small (default) is &lt; 576 (and up); Small (SM) is ≥ 576px;
+			Medium (MD) is ≥ 768px; Large (LG) is ≥ 992px; Extra Large (XL) is ≥ 1200px.<br />
+			<!-- Below this is the section for you to edit -->
+		</p>
+
+		<div class="container-fluid border border-dark rounded-lg">
+			<div class="row">
+				<div
+					class="
+						col-sm-2
+						border border-secondary
+						bg-secondary
+						text-light text-center
+						font-weight-bold
+					"
+				>
+					One
+				</div>
+				<div
+					class="
+						col-sm-2
+						border border-primary
+						bg-primary
+						text-light text-center
+						font-weight-bold
+					"
+				>
+					Two
+				</div>
+				<div
+					class="
+						col
+						border border-success
+						bg-success
+						text-light text-center
+						font-weight-bold
+					"
+				>
+					Three
+				</div>
+			</div>
+			<div class="row">
+				<div
+					class="
+						col-md-3
+						border border-warning
+						bg-warning
+						text-dark text-center
+						font-weight-bold
+					"
+				>
+					Four
+				</div>
+				<div
+					class="
+						col-md-6
+						order-md-first
+						border border-danger
+						bg-danger
+						text-light text-center
+						font-weight-bold
+					"
+				>
+					Five
+				</div>
+				<div
+					class="
+						col-md-3
+						border border-light
+						bg-light
+						text-dark text-center
+						font-weight-bold
+					"
+				>
+					Six
+				</div>
+			</div>
+			<div class="row">
+				<div
+					class="
+						col-lg-4
+						border border-success
+						bg-success
+						text-light text-center
+						font-weight-bold
+					"
+				>
+					Seven
+				</div>
+				<div
+					class="
+						col-lg-4
+						border border-primary
+						bg-primary
+						text-light text-center
+						font-weight-bold
+					"
+				>
+					Eight
+				</div>
+				<div
+					class="
+						col-lg-4
+						border border-info
+						bg-info
+						text-light text-center
+						font-weight-bold
+					"
+				>
+					<!-- this final one could just be col and it would work too, but seems more legit to make it consistent to show intent -->
+					Nine
+				</div>
+			</div>
+		</div>
+		<!-- Above this is the section for you to edit -->
+
+		<br />
+
+		<p>
+			Inside the HTML section of this Codepen is the code for a Bootstrap container with
+			three rows, each currently containing three columns of equal width. This Bootstrap
+			container is visible above.
+		</p>
+		<p></p>
+
+		<p>
+			There is a CSS style applied so that you can see the outline of each column in
+			green, just as a visual aid. The size of your current viewport is also displayed, so
+			that you can easily see when you are hitting certain breakpoints. To change the
+			viewport size, you can resize the width of the Result section/resize your browser.
+			(It is not recommended to use the browser developer tools to change the viewport for
+			this challenge; it will not work well with the Codepen display.)
+		</p>
+
+		<p>
+			Hint: The Codepen linked
+			<a href="https://codepen.io/minae/pen/BaaNEmP?editors=1000" target="_blank">here</a>
+			contains a small demo that can help you with this challenge.
+		</p>
+
+		<h3>Your Challenge:</h3>
+
+		<ol>
+			<li>
+				Make sure that you are logged into your Codepen account, or create a Codepen
+				account if you have not already. Use the "Fork" button in the lower right of your
+				screen to create a copy of this code for your own use. Do not edit the original
+				Codepen, as you will not be able to save your edits.
+			</li>
+			<li>
+				Edit the classes for the columns in the first row so that when the viewport is SM
+				and up (576px or higher), the columns with the words "One" and "Two" inside them
+				each span across two (of the 12 possible) columns for their row and the "Three"
+				column spans across the remaining columns for the same row. For viewports below
+				size SM, the three columns should remain of equal width.
+			</li>
+			<li>
+				Edit the classes for the columns in the second row so that when the viewport is
+				size MD and up (768px or higher) the column with the word 'Five' inside it spans
+				across 50% of its row (i.e. spans 6 columns), and the columns for 'Four' and 'Six'
+				span across the remaining columns equally (so they both take up 25% each). For
+				viewports that are below size MD, the three columns should remain of equal width.
+			</li>
+			<li>
+				Edit the classes for the columns in the third row so that when the viewport is
+				size LG and up (992 px and higher), the columns remain at equal width as they are
+				now, but for sizes below LG, the columns stack on top of each other.
+			</li>
+			<li>
+				Submit the URL of your forked version of this Codepen as your answer to this Code
+				Challenge in the Nucamp learning portal.
+			</li>
+		</ol>
+		<p>
+			You will only need to change code in the HTML section to complete this challenge,
+			not the CSS or JS sections.
+		</p>
+		<p>
+			You will not be graded on this challenge. It will be used for class discussion and
+			knowledge assessment. Please submit your attempt before your Saturday workshop, even
+			if it's not working completely.
+		</p>
+
+		<br />
+		<hr />
+
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+			integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
