@@ -17,21 +17,62 @@
 	<body>
 		<div class="container-fluid">
 			<form>
-				<div class="form-group row">
-					<label class="col col-form-label">Color</label>
-					<div class="col">
-						<select name="colors" id="colors" class="form-control">
+				<div class="row form-row form-group form-group-lg">
+					<label 
+					class="col-sm-4 col-form-label form-control btn btn-lg btn-dark colors-toggler" 
+					href="#colors"
+					id="colorsButton"
+					role="button"
+					for="colors"
+					data-toggle="collapse" 
+					data-target="#colorsCollapse"
+					aria-controls="colorsCollapse"
+						>
+						Color: 
+					</label>
+					<div class="col-sm-4 col-form collapse " id="colorsCollapse"
+					data-toggle="collapse"
+					data-parent="#colorsButton"
+					aria-expanded="false" aria-controls="ColorsCollapse"
+					>
+					<select
+					class="form-control form-control-lg"
+					name="colors"
+					id="colors"
+					size="7"
+							>
 							<option selected>Select...</option>
-							<option value="blue">Blue</option>
+							<option value="blue,white,dark">Blue</option>
+							<option value="#6495ed,#fefefe,primary">
+								Waynes World Pacer Cyan
+							</option>
+							<option value="#004225,#fefefe,light">
+								Yiddish Bracing Green
+							</option>
+							<option value="#9966ff,black,info">
+								Magic Unicorn Purple
+							</option>
+							<option value="#f22468,black,warning">
+								Carcinogenic Tomato Red
+							</option>
+							<option value="#ffdf40,black,success">
+								Emoji Vomit Yellow
+							</option>
 						</select>
 					</div>
 				</div>
-				<!-- Above this is the section for you to edit -->
-				<div class="form-group row">
-					<div class="col">
-						<button type="button" class="btn btn-primary" onclick="changeColor()">
-							Go
-						</button>
+					<!-- Above this is the section for you to edit -->
+					<div class="form-group row">
+						<div class="col-md-8">
+							<button
+								class="btn btn-primary w-25"
+								id="color-submit"
+								onclick="ruinColor()"
+								type="button"
+							>
+								Go
+							</button>
+						</div>
 					</div>
 				</div>
 			</form>
@@ -40,35 +81,47 @@
 		<hr />
 		<h1>Your Challenge:</h1>
 		<p>
-			You will only need to change the code in the HTML section of this Codepen, above the
-			line with the comment that says "Above this is the section for you to edit".
+			You will only need to change the code in the HTML section of this Codepen,
+			above the line with the comment that says "Above this is the section for
+			you to edit".
 		</p>
 		<ol>
 			<li>
-				For both the "col" class in the label element and the "col" class for the div that
-				wraps around the select element, modify them so that they each take up 1/3rd of
-				the row for small and up viewports.
+				For both the "col" class in the label element and the "col" class for
+				the div that wraps around the select element, modify them so that they
+				each take up 1/3rd of the row for small and up viewports.
 			</li>
+
+			<li class="font-weight-bold">Answer: Changed <span class="p-1 text-monospace text-light bg-secondary">col</span> to <span class="p-1 text-monospace text-light bg-secondary">col-sm-4</span> on <span class="p-1 text-monospace text-light bg-secondary">label</span> and <span class="p-1 text-monospace text-light bg-secondary">div</span></li>
 			<li>
-				Beneath the option "Blue", add two or more new color options of your choice. Make
-				sure that the "value" holds a CSS color value such as "red" or "#fff".
+				Beneath the option "Blue", add two or more new color options of your
+				choice. Make sure that the "value" holds a CSS color value such as "red"
+				or "#fff".
 			</li>
+			<li class="font-weight-bold">Answer: added color options with color values (hex RGB)</li>
 			<li>
-				Clicking on the label text "Color" should cause the Select input to become active,
-				but currently, it does not. Can you figure out why, and how to fix it?
+				Clicking on the label text "Color" should cause the Select input to
+				become active, but currently, it does not. Can you figure out why, and
+				how to fix it?
 			</li>
+			<li class="font-weight-bold">Answer: Yes, <span class="p-1 text-monospace text-light bg-secondary">label</span> was missing <span class="p-1 text-monospace text-light bg-secondary">form-control</span> class, and <span class="p-1 text-monospace text-light bg-secondary"> for="colors" </span>(matching the <span class="p-1 text-monospace text-light bg-secondary">id</span> of the <span class="p-1 text-monospace text-light bg-secondary">select</span> element).  Added  <span class="p-1 text-monospace text-light bg-secondary">form-control</span> class to label.</li>
+			<li class="font-weight-bold">I also added the <span class="p-1 text-monospace text-light bg-secondary">btn</span> and <span class="p-1 text-monospace text-light bg-secondary">btn-lg-dark</span> classes to  <span class="p-1 text-monospace text-light bg-secondary"> label </span> and <span class="p-1 text-monospace text-light bg-secondary">class="form-control"</span> to the <span class="p-1 text-monospace text-light bg-secondary">select</span> element). </li>
+
 			<li>
-				Verify that if you choose a color and click on the "Go" button, the background
-				color changes to the color you selected.
+				Verify that if you choose a color and click on the "Go" button, the
+				background color changes to the color you selected.
 			</li>
+			<li class="font-weight-bold">Answer: Yep, works! 😂</li>
 		</ol>
 
 		<br />
 		<hr />
 		<h1>Resources</h1>
-		<ul>
+		<ul id="resource-list">
 			<li>
-				<a href="https://getbootstrap.com/docs/4.5/components/forms/" target="_blank"
+				<a
+					href="https://getbootstrap.com/docs/4.5/components/forms/"
+					target="_blank"
 					>Bootstrap Forms</a
 				>
 			</li>

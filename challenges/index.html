@@ -16,22 +16,51 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row text-center">
-				<p class="jumbotron display-4">Code Challenges</p>
-				<p class="">Code Challenges</p>
-				<br />
-				<p class="">
-					I've been copying the challenges locally so I can see the updates automatically
-					in the browser, rather than have to hit refresh over and over again on
-					codepen.io
-				</p>
-				<ul>
-					they are in this separate folder, and organized by week:
-					<li><a href="week1.html">week1.html</a></li>
-					<li><a href="week2.html">week2.html</a></li>
-				</ul>
-				<p>
-					these challenges use cdnjs for libraries instead of local files for portability
-				</p>
+				<div class="col">
+					<p class="jumbotron display-4">Code Challenges</p>
+					<br />
+					<div class="d-flex flex-column align-items-center">
+						<div class="w-75">
+							<p class="">
+								I've been copying the challenges locally so I can see the
+								updates automatically in the browser, rather than have to hit
+								refresh over and over again on codepen.io
+							</p>
+							<p>they are in this separate folder, and organized by week:</p>
+
+							<ul
+								class="list-group list-group-flush border border-dark rounded"
+							>
+								<a
+									type="button"
+									class="
+										list-group-item
+										list-group-item-action
+										list-group-item-primary
+									"
+									href="week1.html"
+								>
+									week1.html
+								</a>
+								<a
+									type="button"
+									class="
+										list-group-item
+										list-group-item-action
+										list-group-item-success
+									"
+									href="/challenges/week2.html"
+								>
+									week2.html
+								</a>
+							</ul>
+						</div>
+					</div>
+					<p class="mt-3">
+						these challenges use cdnjs for libraries instead of local files for
+						portability
+					</p>
+				</div>
 			</div>
 		</div>
 		<script

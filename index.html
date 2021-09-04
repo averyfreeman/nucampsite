@@ -12,17 +12,9 @@
 		<!-- Google Fonts Preloader -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<!-- Swap fonts if gfonts not loaded -->
-		<link rel="preload" as="style" href="$CSS&display=swap" />
-		<link
-			href="$CSS&display=swap"
-			media="print"
-			onload="this.media='all'"
-			rel="stylesheet"
-		/>
 		<!-- Now load the actual gfonts -->
 		<link
-			href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"
+			href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="css/styles.css" />
@@ -41,6 +33,12 @@
 				    <h1>NuCamp</h1>
 						<h2>a better way to camp</h2>
 					</hgroup>
+					<div class="row">
+
+						<div class="col">
+							<a href="#reserveForm"  type="button" class="btn btn-info" role="button">Reserve Campsite</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -118,11 +116,16 @@
 						<h2>Featured Campsites</h2>
 					</div>
 					<div class="col">
-						<h3>React Lake Campground</h3>
-						<p>
-							Nestled in the foothills of the Chrome Mountains, this campground on the
-							shores of the pristine React Lake is a favorite for fly fishers.
-						</p>
+						<div class="media">
+							<div class="media-body align-self-center">
+							<h3>React Lake Campground</h3>
+							<p>
+								Nestled in the foothills of the Chrome Mountains, this campground on the
+								shores of the pristine React Lake is a favorite for fly fishers.
+							</p>
+						</div>
+						<img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="Breadcrumb Trail" />
+					</div>
 					</div>
 				</div>
 
@@ -142,7 +145,70 @@
             </div>
           </div>
 				</div>
-		</main>
+				</div>
+
+				<div class="row row-content">
+					<div class="col col-sm-6 mx-auto">
+						<div class="card">
+							<h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+							<div class="card-body">
+								<form id="reserveForm" action="submit">
+								<div class="form-group row">
+										
+										<label for="nuCampers" class="col-sm-6 col-form-label">
+											Number of Campers
+										</label>
+										
+										<div class="col">
+										<select name="nuCampers" id="nuCampers" class="form-control">
+											<option class="col-sm-6" value="">
+												Select...
+											</option>
+											<option class="col-sm-6" value="1">
+												1	
+											</option>
+											<option class="col-sm-6" value="2">
+											2	
+										</option>
+										<option class="col-sm-6" value="3">
+											3	
+										</option>
+										<option class="col-sm-6" value="4">
+											4	
+										</option>
+										<option class="col-sm-6" value="5">
+											5	
+										</option>
+										<option class="col-sm-6" value="6">
+											6	
+										</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group row">
+
+								<label class="col-sm-6 col-form-label"  for="date">Date</label>
+
+								<div class="col-sm-6">
+								<input class="form-control"  name="date" id="date" type="date" />
+								</div>
+							</div>
+
+								<div class="form-group row">
+
+									<div class="col">
+										<button class="btn btn-primary" type="submit" for="#search">Search</button>
+									</div>
+
+								</div>
+							
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main> <!-- this is container -->
 
 		<footer id="site-footer" class="site-footer">
 			<div class="container">
@@ -153,9 +219,9 @@
 						<h5>Links</h5>
 						<ul class="list-unstyled">
 							<li class=""><a href="#" class="text-primary text-decoration-none">Home<span class="sr-only">(current)</span></a></li>
-							<li class="text-decoration-none"><a href="#" class="text-secondary text-decoration-none">About</a></li>
+							<li class="text-decoration-none"><a href="aboutus.html" class="text-secondary text-decoration-none">About</a></li>
 							<li class=""><a href="#" class="text-secondary text-decoration-none">Sites</a></li>
-							<li class=""><a href="#" class="text-secondary text-decoration-none">Contact</a></li>
+							<li class=""><a href="contactus.html" class="text-secondary text-decoration-none">Contact</a></li>
 						</ul>
 					</div>
 
@@ -163,7 +229,7 @@
 					<div id="footer-social-media-site-links" class="col-6 col-sm-5 text-center">
 						<h5>Social</h5>
 						<ul class="list-unstyled" role="navigation">
-							<a href="https://instagram.com/" class="btn btn-social-icon btn-instagram " target="_blank" aria-label="Link to nucamp instagram page (opens in new tab)" rel="external noopener noreferrer"><i class="fa fa-instagram"></i></a>
+							<a href="https://instagram.com/" class="btn btn-adn" target="_blank" aria-label="Link to nucamp instagram page (opens in new tab)" rel="external noopener noreferrer"><i class="fa fa-instagram"></i></a>
 							<a href="https://facebook.com/" class="btn btn-social-icon btn-facebook" target="_blank" aria-label="Link to nucamp facebook page (opens in new tab)" rel="external noopener noreferrer"><i class="fa fa-facebook"></i></a>
 							<a href="https://twitter.com/" target="_blank" class="btn btn-social-icon btn-twitter" aria-label="Link to nucamp twitter page (opens in new tab)" rel="external noopener noreferrer"><i class="fa fa-twitter"></i></a>
 							<!-- I used an alt icon for youtube since none of the other icons had any words, either -->
@@ -197,6 +263,7 @@
 			<div id="footer-site-copyright-info" class="container">
 				<div class="row">
 					<div class="col offset-3 col-md-5 offset-md-4 col-sm-6 offset-sm-3">
+						<!-- align-self-center for footer? -->
 						<h5 class="copy-date">
 							<i class="fa fa-copyright copy-sign" aria-hidden="true"></i>&nbsp;
 							<span id="this-year">
