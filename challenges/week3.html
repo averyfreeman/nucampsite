@@ -10,37 +10,27 @@
 			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="css/week2.css" />
+		<link rel="stylesheet" href="css/week3.css" />
 
-		<title>Week 2 code challenge</title>
+		<!-- wait, didn't I already do this one (?) -->
+		<title>Week 3 code challenge</title>
 	</head>
 	<body>
 		<div class="container-fluid">
 			<form>
-				<div class="row form-row form-group form-group-lg">
-					<label 
-					class="col-sm-4 col-form-label form-control btn btn-lg btn-dark colors-toggler" 
-					href="#colors"
-					id="colorsButton"
-					role="button"
-					for="colors"
-					data-toggle="collapse" 
-					data-target="#colorsCollapse"
-					aria-controls="colorsCollapse"
+				<div class="form-group row">
+					<div class="col-4 text-center">
+						<label role="button" class="btn btn-primary" for="colors"
+							>Focus Color Menu</label
 						>
-						Color: 
-					</label>
-					<div class="col-sm-4 col-form collapse " id="colorsCollapse"
-					data-toggle="collapse"
-					data-parent="#colorsButton"
-					aria-expanded="false" aria-controls="ColorsCollapse"
-					>
-					<select
-					class="form-control form-control-lg"
-					name="colors"
-					id="colors"
-					size="7"
-							>
+						<!-- href="#collapseMenu"
+							data-toggle="collapse"
+							aria-expanded="false"
+							aria-controls="collapseMenu" -->
+					</div>
+					<div class="col-sm-4 text-center">
+						<!-- data="collapse" id="collapseMenu" -->
+						<select name="colors" id="colors" size="12" class="form-control">
 							<option selected>Select...</option>
 							<option value="blue,white,dark">Blue</option>
 							<option value="#6495ed,#fefefe,primary">
@@ -49,26 +39,31 @@
 							<option value="#004225,#fefefe,light">
 								Yiddish Bracing Green
 							</option>
-							<option value="#9966ff,black,info">
-								Magic Unicorn Purple
-							</option>
+							<option value="#9966ff,black,info">Magic Unicorn Purple</option>
 							<option value="#f22468,black,warning">
 								Carcinogenic Tomato Red
 							</option>
-							<option value="#ffdf40,black,success">
-								Emoji Vomit Yellow
-							</option>
+							<option value="#ffdf40,black,success">Emoji Vomit Yellow</option>
 						</select>
 					</div>
+					<div class="col-sm-4 text-center">
+						<a
+							role="button"
+							type="submit"
+							class="btn btn-dark"
+							id="rand-opt-gen"
+							>Gen Rand Option</a
+						>
+					</div>
 				</div>
-					<!-- Above this is the section for you to edit -->
-					<div class="form-group row">
-						<div class="col-md-8">
+				<!-- Above this is the section for you to edit -->
+				<div class="container mt-5">
+					<div class="form-row row">
+						<div class="col">
 							<button
-								class="btn btn-primary w-25"
-								id="color-submit"
-								onclick="ruinColor()"
 								type="button"
+								class="btn btn-danger"
+								onclick="mangleColor()"
 							>
 								Go
 							</button>
@@ -91,33 +86,26 @@
 				the div that wraps around the select element, modify them so that they
 				each take up 1/3rd of the row for small and up viewports.
 			</li>
-
-			<li class="font-weight-bold">Answer: Changed <span class="p-1 text-monospace text-light bg-secondary">col</span> to <span class="p-1 text-monospace text-light bg-secondary">col-sm-4</span> on <span class="p-1 text-monospace text-light bg-secondary">label</span> and <span class="p-1 text-monospace text-light bg-secondary">div</span></li>
 			<li>
 				Beneath the option "Blue", add two or more new color options of your
 				choice. Make sure that the "value" holds a CSS color value such as "red"
 				or "#fff".
 			</li>
-			<li class="font-weight-bold">Answer: added color options with color values (hex RGB)</li>
 			<li>
 				Clicking on the label text "Color" should cause the Select input to
 				become active, but currently, it does not. Can you figure out why, and
 				how to fix it?
 			</li>
-			<li class="font-weight-bold">Answer: Yes, <span class="p-1 text-monospace text-light bg-secondary">label</span> was missing <span class="p-1 text-monospace text-light bg-secondary">form-control</span> class, and <span class="p-1 text-monospace text-light bg-secondary"> for="colors" </span>(matching the <span class="p-1 text-monospace text-light bg-secondary">id</span> of the <span class="p-1 text-monospace text-light bg-secondary">select</span> element).  Added  <span class="p-1 text-monospace text-light bg-secondary">form-control</span> class to label.</li>
-			<li class="font-weight-bold">I also added the <span class="p-1 text-monospace text-light bg-secondary">btn</span> and <span class="p-1 text-monospace text-light bg-secondary">btn-lg-dark</span> classes to  <span class="p-1 text-monospace text-light bg-secondary"> label </span> and <span class="p-1 text-monospace text-light bg-secondary">class="form-control"</span> to the <span class="p-1 text-monospace text-light bg-secondary">select</span> element). </li>
-
 			<li>
 				Verify that if you choose a color and click on the "Go" button, the
 				background color changes to the color you selected.
 			</li>
-			<li class="font-weight-bold">Answer: Yep, works! 😂</li>
 		</ol>
 
 		<br />
 		<hr />
 		<h1>Resources</h1>
-		<ul id="resource-list">
+		<ul>
 			<li>
 				<a
 					href="https://getbootstrap.com/docs/4.5/components/forms/"
@@ -170,6 +158,6 @@
 			integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
 			crossorigin="anonymous"
 		></script>
-		<script src="js/week2.js"></script>
+		<script src="js/week3.js"></script>
 	</body>
 </html>
