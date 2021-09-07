@@ -49,6 +49,14 @@ header h2 {
 	min-height: 200px;
 }
 
+.tab-content {
+	border: 1px solid #ddd;
+	border-top: none;
+	padding: 10px;
+	/* I thought a little more padding looked better: 
+	padding: 2rem; */
+}
+
 .copy-date {
 	/* margin-top: 1rem;
 	position: absolute;
