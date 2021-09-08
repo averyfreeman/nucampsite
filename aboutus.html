@@ -4,6 +4,7 @@
 		<!-- Required meta tags always come first -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 		<!-- this is material design bootstrap add-on, was checking it out for fun -->
 		<!-- <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
@@ -149,10 +150,11 @@
 				</div>
 			</div>
 
-			<div class="row row-content">
+			<!-- #region old navTabs -->
+		<!--	<div class="row row-content">
 				<div class="col">
 					<h3>Community Partners</h3>
-                <ul class="nav nav-tabs">
+                 <ul class="nav nav-tabs">
                     <li class="nav-item">
 											<a href="#bootstrap" class="nav-link active" role="tab" data-toggle="tab">
 												Bootstrap Outfitters
@@ -173,10 +175,9 @@
 												Node Outdoor Apparel
 											</a>
 										</li>
-                </ul>
-					<!-- <h3>Community Partners</h3> -->
-					<div class="tab-content">
-<div class="tab-pane fade show active" id="bootstrap">
+                </ul> 
+								<div class="tab-content">
+									<div class="tab-pane fade show active" id="bootstrap">
 	<h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
 	<p class="d-none d-sm-block">
 		Bootstrap Outfitters supplies you with the gear you need at prices you can't
@@ -203,7 +204,78 @@
 		From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will
 		be sure to get you covered.
 	</p>
+</div> 
 </div>
+</div>
+</div> -->
+<!-- endregion -->
+
+			<div class="row row-content">
+				<div class="col">
+					<h3>Community Partners</h3>
+						<div id="accordion">
+							<div class="card">
+								<div role="tab" class="card-header">
+									<h4>
+										<a class="collapsed text-reset text-decoration-none" data-toggle="collapse" data-target="#bootstrap">
+											Bootstrap Outfitters <small>Outdoor Gear Specialists</small>
+										</a>
+									</h4>
+									<div class="collapse show" id="bootstrap" data-parent="#accordion">
+										<div class="card-body">
+											<p class="d-none d-sm-block">
+												Bootstrap Outfitters supplies you with the gear you need at prices you can't
+												beat.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						<!-- </div> -->
+						<div class="card">
+							<div class="card-header" role="tab">
+								<h4>
+									<a class="collapsed text-reset text-decoration-none" data-target="#git" data-toggle="collapse">
+										Git Out Expeditions <small>Group Adventure Expeditions</small>
+									</a>
+								</h4>
+								<div class="collapse" id="git" data-parent="#accordion">
+									<div class="card-body">
+										<p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" role="tab">
+								<h4>
+									<a class="collapsed text-reset text-decoration-none" data-target="#mongo" data-toggle="collapse">	
+										Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small>
+									</a>
+								</h4>	
+								<div class="collapse" id="mongo" data-parent="#accordion">
+									<div class="card-body">
+										<p class="d-none d-sm-block">
+											Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div role="tab" class="card-header">
+								<h4>
+									<a class="collapsed text-reset text-decoration-none" data-toggle="collapse" data-target="#node">
+											Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small>
+									</a>
+								</h4>
+							<div class="collapse" id="node" data-parent="#accordion">
+									<div class="card-body">
+										<p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+									</div>
+								</div>
+							</div>
+						</div> 
 					</div>
 				</div>
 			</div>
