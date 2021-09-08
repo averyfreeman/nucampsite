@@ -11,4 +11,16 @@ module.exports = {
 	watchOptions: {
 		ignored: ['node_modules', '.git'],
 	},
+	snippetOptions: {
+		rule: {
+			match: /<\/head>/u,
+			fn(snippet, match) {
+				const {
+					groups: { src },
+				} = /src='(?<src>[^']+)'/u.exec(snippet);
+
+				return `<script src="${src}" async></script>${match}`;
+			},
+		},
+	},
 };
