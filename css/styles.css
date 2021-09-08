@@ -57,6 +57,20 @@ header h2 {
 	padding: 2rem; */
 }
 
+.carousel {
+	border: solid #5637dd;
+}
+
+.carousel-caption {
+	/* 8-digit-hex maxes more sense for a simple color like this */
+	background-color: #00000055;
+}
+
+/* .carousel-img-container {
+	height: 40vh;
+	width: 60vw;
+} */
+
 .copy-date {
 	/* margin-top: 1rem;
 	position: absolute;
