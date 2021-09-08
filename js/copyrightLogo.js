@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 /* copyright logo in footer with dynamically updated year */
 /* was hoping to have a clock that incremented at the bottom for my cheesy footer.  This is what Ii came up with on my own (but doesnt stop at 60sec).  I am also pretty bad at "this" keyword - I barely understand it - it's for scoping document vs window, right (?) I never have to use it so I've mostly forgotten it even exists (Not to mention, it's a major pain in the ass).
 this.secTarget = document.getElementById('this-second');
@@ -59,13 +59,14 @@ this.startTimer(64000, this.secTarget);
 // const secTarget = document.getElementById('this-second');
 // secTarget.append(secFunc(tick, count));
 /* `${currentDate} ${currentTime} ${this.incrementer} ${OrgName}`, */
+
 /* Or, one-liner: */
-document
-	.getElementById('this-year')
-	.append(new Date().getFullYear() + ' epileptic jellyfish');
+// document
+// 	.getElementById('this-year')
+// 	.append(new Date().getFullYear() + ' epileptic jellyfish');
 
 /* alert user they are alreadqy on the page they are trying to access 😂*/
-let hashTags = document.querySelectorAll("a[href='#']");
-for (tag of hashTags) {
-	tag.addEventListener('click', () => alert(`You're already on that page!`));
-}
+// let hashTags = document.querySelectorAll("a[href='#']");
+// for (tag of hashTags) {
+// 	tag.addEventListener('click', () => alert(`You're already on that page!`));
+// }
