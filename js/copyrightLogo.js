@@ -61,12 +61,12 @@ this.startTimer(64000, this.secTarget);
 /* `${currentDate} ${currentTime} ${this.incrementer} ${OrgName}`, */
 
 /* Or, one-liner: */
-// document
-// 	.getElementById('this-year')
-// 	.append(new Date().getFullYear() + ' epileptic jellyfish');
+document
+	.getElementById('this-year')
+	.append(new Date().getFullYear() + ' epileptic jellyfish');
 
 /* alert user they are alreadqy on the page they are trying to access 😂*/
-// let hashTags = document.querySelectorAll("a[href='#']");
-// for (tag of hashTags) {
-// 	tag.addEventListener('click', () => alert(`You're already on that page!`));
-// }
+let hashTags = document.querySelectorAll("a[href='#']");
+for (let tag of hashTags) {
+	tag.addEventListener('click', () => alert(`You're already on that page!`));
+}

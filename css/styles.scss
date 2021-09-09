@@ -1,3 +1,5 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
 body {
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
@@ -37,12 +39,11 @@ header h2 {
 .carousel-caption {
 	/* 8-digit-hex maxes more sense for a simple color like this */
 	background-color: #00000055;
-	/* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 /* .carousel-img-container {
-	height: 28vh;
-	width: 59vw;
+	height: 40vh;
+	width: 60vw;
 } */
 
 .content-box {
@@ -50,6 +51,9 @@ header h2 {
 }
 
 .copy-date {
+	/* margin-top: 1rem;
+	position: absolute;
+	left: 30%; */
 	opacity: 0.3;
 	transition: all 2s ease;
 }

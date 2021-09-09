@@ -2,12 +2,14 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- shrink-to-fit=no was in bootstrap docs -->
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="stylesheet" href="css/styles.css" />
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 		<!-- this is material design bootstrap add-on, was checking it out for fun -->
-		<!-- <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
-			<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" /> -->
+		<link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
+			<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" />
 			<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 			<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 		<!-- Google Fonts Preloader -->
@@ -18,11 +20,11 @@
 			href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="css/styles.css" />
+		<!-- <link rel="stylesheet" href="css/styles.css" /> -->
 		<title>NuCamp: A Better Way To Camp</title>
 	</head>
 	<body>
-		<header class="jumbotron jumbotron-fluid">
+		<header class="jumbotron jumbotron-fluid mb-0">
 			<div class="container">
 				<div class="row">
           <div class="col-4 col-sm-3 col-md-2 align-self-center">
@@ -388,8 +390,8 @@
 				});
 		</script>
 	
-		<!-- <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script> -->
-		<!-- <script src="js/copyrightLogo.js" type="text/javascript"></script> -->
+		<script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+		<script src="js/copyrightLogo.js" type="text/javascript"></script>
 	
 	</body>
 </html>
