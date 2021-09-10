@@ -8,8 +8,8 @@
 		<link rel="stylesheet" href="css/styles.css" />
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 		<!-- this is material design bootstrap add-on, was checking it out for fun -->
-		<link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
-			<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" />
+		<!-- <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css" />
+			<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css" /> -->
 			<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 			<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 		<!-- Google Fonts Preloader -->
@@ -41,8 +41,7 @@
 						>
 						<!-- <div class="row"> -->
 							<!-- <div class="col"> -->
-								<!-- I tried setting some of these inside the tooltip object, too -->
-								<a href="#reserveForm" type="button" class="btn btn-lg btn-info" role="button" data-toggle="tooltip" data-placement="bottom" data-html="true" title='<i class="fa fa-phone fa-lg text-success"></i>&nbsp; Or call us at </br><strong>1-206-555-1234</strong>'>Reserve Campsite</a>
+								<a id="reserveButton" type="button" class="btn btn-lg btn-info" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
 								
 							<!-- </div> -->
 						</div>
@@ -50,7 +49,92 @@
 				</div>
 			</header>
 
+			<!-- #region reserveModal -->
+			<div id="reserveModal" class="modal fade" role="dialog">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header bg-info text-white">
+							<h3 class="modal-title">Reserve a Campsite</h3>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+							<div class="container-fluid">
+								<form>
+									<div class="form-group row">
+										<label for="nuCampers" class="col-sm-6 col-form-label">
+											Number of Campers
+										</label>
+										<div class="col">
+										<select name="nuCampers" id="nuCampers" class="form-control">
+											<option class="col-sm-6" value="">
+												Select...
+											</option>
+											<option class="col-sm-6" value="1">
+												1	
+											</option>
+											<option class="col-sm-6" value="2">
+											2	
+										</option>
+										<option class="col-sm-6" value="3">
+											3	
+										</option>
+										<option class="col-sm-6" value="4">
+											4	
+										</option>
+										<option class="col-sm-6" value="5">
+											5	
+										</option>
+										<option class="col-sm-6" value="6">
+											6	
+										</option>
+									</select>
+								</div>
+							</div>
 
+							<div class="form-group row">
+								<label class="col-sm-6 col-form-label"  for="date">Date</label>
+
+								<div class="col-sm-6">
+									<input class="form-control"  name="date" id="date" type="date" />
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="" class="col-sm-6 col-form-label">
+									Campsite Type
+								</label>
+								<div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+									<label for="siteTent" class="btn btn-success active">
+										<input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked>
+										Tent
+									</label>
+									<label for="siteRV" class="btn btn-primary">
+										<input type="radio" name="siteType" id="siteRV" value="rv" autocomplete="off">
+										RV
+									</label>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col">
+									<button class="btn btn-secondary"  data-dismiss="modal">
+										Cancel
+									</button>
+									<button class="btn btn-primary" type="submit" for="#search">
+										Search
+									</button>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+			<!-- endregion -->
+
+		<!-- #region navbar -->
 		<nav id="main-navigation" class="navbar navbar-expand-sm navbar-dark sticky-top" aria-label="Main navigation bar">
       <!-- tag below for creating page outline -->
       <!-- <h1 class="d-none">navigation bar</h1> -->
@@ -97,7 +181,7 @@
 				</div>
 			</div>
 		</nav>
-
+		<!-- endregion navbar -->
 	<!-- #region login modal -->
 		<div id="loginModal" class="modal fade" role="dialog">
 			<div class="modal-dialog" role="document">
@@ -130,22 +214,17 @@
 										<button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
 									</div>
 							</form>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- endregion -->
-    
-		<!-- <nav aria-label="breadcrumbs">
-      <h1 class="d-none">navigation breadcrumbs</h1>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item active">Home &nbsp;</li>
-			</ol>
-		</nav> -->
+		<!-- endregion -->
 
-		<main class="container">
 
+		<!-- #region main-carousel-inside-here -->
+	<main class="container">
+			<!-- #region carousel -->
 			<div class="row row-content">
 				<div class="col-md-8 mx-auto">
 					<div id="homeCarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -190,32 +269,33 @@
 					</div>
 				</div>
 			</div>
+			<!-- endregion -->
 			
-			<div id="main-discover" class="row row-content align-items-center">
-			  <div class="col-sm-4 order-sm-last col-md-3">
-						<h2 class="text-sm-right">Discover & Review</h2>
+		<div id="main-discover" class="row row-content align-items-center">
+			<div class="col-sm-4 order-sm-last col-md-3">
+					<h2 class="text-sm-right">Discover & Review</h2>
+			</div>
+			<div class="col">
+				<div class="media">
+					<img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+						<div class="media-body align-self-center">
+							<h3>Our Campsites</h3>
+						<p>
+							Explore our growing database of curated campsites and leave your own
+							reviews!
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="main-featured-campsites" class="row row-content align-items-center">
+				<div class="col-sm-4 col-md-3">
+					<h2>Featured Campsites</h2>
 				</div>
 				<div class="col">
-          <div class="media">
-            <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
-              <div class="media-body align-self-center">
-                <h3>Our Campsites</h3>
-              <p>
-                Explore our growing database of curated campsites and leave your own
-                reviews!
-              </p>
-              </div>
-				  	</div>
-					</div>
-				</div>
-
-				<div id="main-featured-campsites" class="row row-content align-items-center">
-					<div class="col-sm-4 col-md-3">
-						<h2>Featured Campsites</h2>
-					</div>
-					<div class="col">
-						<div class="media">
-							<div class="media-body align-self-center">
+					<div class="media">
+						<div class="media-body align-self-center">
 							<h3>React Lake Campground</h3>
 							<p>
 								Nestled in the foothills of the Chrome Mountains, this campground on the
@@ -224,89 +304,28 @@
 						</div>
 						<img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="Breadcrumb Trail" />
 					</div>
-					</div>
 				</div>
+			</div>
 
-				<div id="main-partners" class="row row-content align-items-center">
-					<div class="col-sm-4 order-sm-last col-md-3">
-						<h2 class="text-sm-right">Our Community Partners</h2>
-					</div>
-					<div class="col">
-            <div class="media">
-              <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
-              <div class="media-body align-self-center">
-					    	<h3>Bootstrap Outfitters</h3>
-                <p>
-                  Bootstrap Outfitters supplies you with gear you need at prices you can't
-                  beat.
-                </p>
+			<div id="main-partners" class="row row-content align-items-center">
+				<div class="col-sm-4 order-sm-last col-md-3">
+					<h2 class="text-sm-right">Our Community Partners</h2>
+				</div>
+				<div class="col">
+					<div class="media">
+						<img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+						<div class="media-body align-self-center">
+							<h3>Bootstrap Outfitters</h3>
+							<p>
+								Bootstrap Outfitters supplies you with gear you need at prices you can't
+								beat.
+							</p>
             </div>
           </div>
 				</div>
-				</div>
-
-				<div class="row row-content">
-					<div class="col col-sm-6 mx-auto">
-						<div class="card">
-							<h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
-							<div class="card-body">
-								<form id="reserveForm" action="submit">
-								<div class="form-group row">
-										
-										<label for="nuCampers" class="col-sm-6 col-form-label">
-											Number of Campers
-										</label>
-										
-										<div class="col">
-										<select name="nuCampers" id="nuCampers" class="form-control">
-											<option class="col-sm-6" value="">
-												Select...
-											</option>
-											<option class="col-sm-6" value="1">
-												1	
-											</option>
-											<option class="col-sm-6" value="2">
-											2	
-										</option>
-										<option class="col-sm-6" value="3">
-											3	
-										</option>
-										<option class="col-sm-6" value="4">
-											4	
-										</option>
-										<option class="col-sm-6" value="5">
-											5	
-										</option>
-										<option class="col-sm-6" value="6">
-											6	
-										</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="form-group row">
-
-								<label class="col-sm-6 col-form-label"  for="date">Date</label>
-
-								<div class="col-sm-6">
-								<input class="form-control"  name="date" id="date" type="date" />
-								</div>
-							</div>
-
-								<div class="form-group row">
-
-									<div class="col">
-										<button class="btn btn-primary" type="submit" for="#search">Search</button>
-									</div>
-
-								</div>
-							
-							</form>
-						</div>
-					</div>
-				</div>
 			</div>
 		</main> <!-- this is container -->
+	<!-- endregion main-carousel-inside-here -->
 
 		<footer id="site-footer" class="site-footer">
 			<div class="container">
@@ -315,13 +334,15 @@
 					<!-- Note about footer: Since there's a nav element here, the current page page is primary while all other text is secondary -->
 					<div id="footer-navigation" class="col-4 col-sm-2 offset-1" role="navigation">
 						<h5>Links</h5>
-						<ul class="list-unstyled">
-							<li class=""><a href="#" class="text-primary text-decoration-none">Home<span class="sr-only">(current)</span></a></li>
-							<li class="text-decoration-none"><a href="aboutus.html" class="text-secondary text-decoration-none">About</a></li>
-							<li class=""><a href="#" class="text-secondary text-decoration-none">Sites</a></li>
-							<li class=""><a href="contactus.html" class="text-secondary text-decoration-none">Contact</a></li>
-						</ul>
-					</div>
+							<ul class="list-unstyled">
+								<li class=""><a href="#" class="text-primary text-decoration-none">Home<span class="sr-only">(current)</span></a></li>
+								<li class="text-decoration-none"><a href="aboutus.html" class="text-secondary text-decoration-none">About</a></li>
+								<li class="">
+									<a href="#" class="text-secondary text-decoration-none">Sites</a></li>
+								<li class="">
+									<a href="contactus.html" class="text-secondary text-decoration-none">Contact</a></li>
+							</ul>
+						</div>
 
 					<!-- Please excuse all my ARIA labels and http refs! -->
 					<div id="footer-social-media-site-links" class="col-6 col-sm-5 text-center">
@@ -336,23 +357,23 @@
 					</div>
 
 					<div id="footer-contact-links" class="col-sm-4 text-center">
-							<a 
-							aria-label="2 0 6. 5 5 5.1 2 3 4."
-							class="btn btn-link text-secondary text-nowrap text-decoration-none" 
-							href="tel:+12065551234" 
-							role="button" 
+						<a 
+						aria-label="2 0 6. 5 5 5.1 2 3 4."
+						class="btn btn-link text-secondary text-nowrap text-decoration-none" 
+						href="tel:+12065551234" 
+						role="button" 
+						>
+							<i class="fa fa-phone fa-lg text-primary"></i> 
+							&nbsp; +1 (206) 555-1234</a
 							>
-								<i class="fa fa-phone fa-lg text-primary"></i> 
-								&nbsp; +1 (206) 555-1234</a
-								>
-								<br />
-								<a
-								aria-label="Contact nucampsites via email"
-								class="btn btn-link text-secondary text-nowrap text-decoration-none"
-								href="mailto:campsites@nucamp.co"
-								role="button"
-								><i class="fa fa-envelope-o fa-lg text-primary"></i>
-								&nbsp; campsites@nucamp.co</a>
+							<br />
+							<a
+							aria-label="Contact nucampsites via email"
+							class="btn btn-link text-secondary text-nowrap text-decoration-none"
+							href="mailto:campsites@nucamp.co"
+							role="button"
+							><i class="fa fa-envelope-o fa-lg text-primary"></i>
+							&nbsp; campsites@nucamp.co</a>
             </div>
           </div>
         </div>
@@ -371,27 +392,42 @@
 					</h5>
 			</div>
 		</footer>
-		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-		<!-- <script src="node_modules/popper.js/dist/umd/popper.min.js"></script> -->
-		<!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="module"></script> -->
-		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" type="module"></script>
-		<script src="node_modules/bootstrap/js/dist/tooltip.js"></script>
-		<script>
-			$.when($.ready).then(() => {
-				$('[data-toggle="tooltip"]').tooltip({
-					container: 'body',
-					boundary: 'window'
-					// template: 'arrow',
-					// trigger: 'hover',
-					// placement: 'bottom',
-					// html: true,
-				});
-				console.log('ready');
-				});
+		<!-- endregion footer -->
+
+		<script src="node_modules/jquery/dist/jquery.slim.min.js">
 		</script>
-	
-		<script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="js/copyrightLogo.js" type="text/javascript"></script>
+		<!-- <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script> -->
+		<script> 
+		// jquery behaves weird af, I wanna know if it's loaded
+		window.$ = $;
+			$(document).ready(function () {
+				console.log(this, 'ready');
+			});
+		</script>
+		<script>
+			$('#reserveModal').on('shown.bs.modal', function () {
+				$('#reserveButton').trigger('focus');
+			});
+		</script>
+		<script src="node_modules/bootstrap/js/dist/button.js">
+			$('.btn-group-toggle').button('toggle');
+		</script>
+		<script>
+			$('button[for="#search"]').click(function () {
+				console.log('searching...');
+				$('#reserveModal').modal('toggle');
+			});
+		</script>
+		<!-- <script>
+			// every clicked button gets an active class!!!
+			$('.btn').on('click', function () {
+				$(this).siblings('label').removeClass('active');
+				$(this).addClass('active');
+			});
+		</script> -->
 	
 	</body>
 </html>
