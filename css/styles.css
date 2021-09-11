@@ -34,11 +34,20 @@ header h2 {
 	border: solid #5637dd;
 }
 
-#carouselButtons {
+#carouselButton {
+	border-top: 2px solid rgb(128, 0, 0);
+	border-right: 2px solid rgb(200, 0, 0);
+	border-bottom: 2px solid rgb(200, 0, 0);
+	border-left: 2px solid rgb(128, 0, 0);
+	box-shadow: inset 2px 2px 4px rgb(150, 2, 2);
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	z-index: 100;
+}
+
+#carouselButton > i {
+	text-shadow: 3px 3px 6px rgb(92, 9, 9);
 }
 
 .carousel-caption {
