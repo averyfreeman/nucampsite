@@ -34,6 +34,13 @@ header h2 {
 	border: solid #5637dd;
 }
 
+#carouselButtons {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+}
+
 .carousel-caption {
 	/* 8-digit-hex maxes more sense for a simple color like this */
 	background-color: #00000055;
