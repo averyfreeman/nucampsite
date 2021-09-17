@@ -5,7 +5,9 @@
 	"main": "index.html",
 	"scripts": {
 		"lite": "lite-server",
-		"start": "npm run lite",
+		"start": "npm run watch & npm run lite",
+		"sass": "node-sass --source-comments --source-map-embed --output-style compressed -o css css/styles.scss > css/styles.css",
+		"watch": "node-sass -wr css/ -o css",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],

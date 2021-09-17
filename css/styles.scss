@@ -1,59 +1,72 @@
-@import '../node_modules/bootstrap/scss/bootstrap';
+$color-primary: #3046c5;
+$color-secondary: #5637dd;
+$color-pale: #cec8ff;
+$color-mid: #901cad;
+$color-dark: #60106b;
+$color-black-translucent: #00000055;
+$color-play-button-border-dark: rgb(128, 0, 0);
+$color-play-button-border-light: rgb(200, 0, 0);
+$color-play-button: rgb(92, 9, 9);
+$color-play-button-shadow: rgb(150, 2, 2);
+
+$font-body: 'Open Sans', sans-serif;
+$font-header: 'Lobster', cursive;
 
 body {
 	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $font-body;
 	overflow-x: hidden;
 }
 
 h1,
 h2,
 h3 {
-	font-family: 'Lobster', cursive;
+	font-family: $font-header;
 }
 
 h2 {
-	color: #3046c5;
+	color: $color-primary;
 }
 
-header h2 {
-	color: #cec8ff;
+header {
+	h2 {
+		color: $color-pale;
+	}
 }
-
-/* was experimenting with some table properties in the MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr */
-/* table {
-	border: 1px solid black;
-	font: 1rem 'Open Sans', Helvetica, Arial, sans-serif;
-	border-spacing: 0;
-	border-collapse: collapse;
-} */
 
 .navbar {
-	background-color: #901cad;
+	background-color: $color-mid;
 }
 
 .carousel {
-	border: solid #5637dd;
+	border: solid $color-secondary;
+}
+
+#carouselButton {
+	border-top: 2px solid $color-play-button-border-dark;
+	border-right: 2px solid $color-play-button-border-light;
+	border-bottom: 2px solid $color-play-button-border-light;
+	border-left: 2px solid $color-play-button-border-dark;
+	box-shadow: inset 2px 2px 4px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+}
+
+#carouselButton > i {
+	text-shadow: 3px 3px 6px;
 }
 
 .carousel-caption {
-	/* 8-digit-hex maxes more sense for a simple color like this */
-	background-color: #00000055;
+	background-color: $color-black-translucent;
 }
-
-/* .carousel-img-container {
-	height: 40vh;
-	width: 60vw;
-} */
 
 .content-box {
 	box-sizing: content-box;
 }
 
 .copy-date {
-	/* margin-top: 1rem;
-	position: absolute;
-	left: 30%; */
 	opacity: 0.3;
 	transition: all 2s ease;
 }
@@ -71,7 +84,12 @@ header h2 {
 
 .jumbotron {
 	padding: 30px;
-	background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
+	background-image: linear-gradient(
+		to right,
+		$color-secondary,
+		$color-primary,
+		$color-dark
+	);
 	border-radius: 0px;
 	color: white;
 	margin: 0;
@@ -92,15 +110,7 @@ header h2 {
 	border: 1px solid #ddd;
 	border-top: none;
 	padding: 10px;
-	/* I thought a little more padding looked better: 
-	padding: 2rem; */
 }
-
-/* @media (min-width: 576px) {
-	.copy-date {
-		left: auto;
-	}
-} */
 
 @media (prefers-reduced-motion: no-preference) {
 	.copy-sign {
