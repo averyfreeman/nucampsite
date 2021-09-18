@@ -4,25 +4,47 @@
 	"description": "This is a website for the fictional campsites review site NuCamp.",
 	"main": "index.html",
 	"scripts": {
+		"bashonly": "node-sass -w css/styles.scss -o css/ & npm run lite",
+		"build": "npm run clean && npm run scss:sourcemap && npm run imagemin && npm run copyfonts && npm run usemin",
+		"clean": "rimraf dist",
+		"commentOne": "echo 'npm run bashonly is a substitute for parallelshell and onchange, does same thing with bash & character' && exit 1",
+		"copyfonts": "copyfiles -Vf node_modules/font-awesome/fonts/* dist/fonts",
+		"commentTwo": "echo 'imagemin would not install on my laptop, so I ran sharp - it cut my img dir size by 60%' && exit 1",
+		"imagemin": "mkdir -p dist/img && sharp --optimize --reductionEffort 0 --smartSubsample  -i img/* -o dist/img",
 		"lite": "lite-server",
-		"start": "npm run watch & npm run lite",
-		"sass": "node-sass --source-comments --source-map-embed --output-style compressed -o css css/styles.scss > css/styles.css",
-		"watch": "node-sass -wr css/ -o css",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "npm run watch:all",
+		"scss": "node-sass -o css css/ css/",
+		"scss:embed-sourcemap": "node-sass --source-comments --source-map-embed --output-style compressed -o css css/styles.scss > css/styles.css",
+		"scss:sourcemap": "node-sass --source-map css/styles.css.map --output-style expanded -o css css/styles.scss > css/styles.css",
+		"test": "echo 'Error: I dunno, download jest or something...?' && exit 1",
+		"usemin": "usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+		"watch:scss": "onchange 'css/*.scss' -- npm run scss",
+		"watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"camping",
+		"hiking",
+		"swimming",
+		"website",
+		"business",
+		"obligatory",
+		"required",
+		"landing",
+		"page"
+	],
+	"author": "Avery Freeman",
+	"license": "WTFPL",
 	"dependencies": {
 		"bootstrap": "^4.5.3",
 		"bootstrap-social": "^5.1.1",
 		"font-awesome": "^4.7.0",
 		"jquery": "^3.5.1",
-		"mdbootstrap": "^4.20.0",
 		"popper.js": "^1.16.1"
 	},
 	"devDependencies": {
+		"@clarencep/parallelshell": "^3.0.4",
 		"lite-server": "^2.6.1",
-		"node-sass": "^6.0.1"
+		"node-sass": "^6.0.1",
+		"onchange": "^7.1.0"
 	}
 }

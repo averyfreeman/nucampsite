@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!-- Required meta tags always come first -->
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- shrink-to-fit=no was in bootstrap docs -->
-		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-		<!-- Additional CSS must be placed after Bootstrap CSS -->
-		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+		<!-- build:css css/main.css -->
+		<link
+			rel="stylesheet"
+			href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="node_modules/font-awesome/css/font-awesome.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="node_modules/bootstrap-social/bootstrap-social.css"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+		<!-- endbuild -->
 
 		<link
-		href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap"
-		rel="stylesheet"
-	/>
-		<link rel="stylesheet" href="css/styles.css" />
+			href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
 
 		<title>NuCamp: A Better Way To Camp</title>
 	</head>
 	<body>
-
 		<header class="jumbotron jumbotron-fluid">
 			<div class="container">
 				<div class="row">
-          <div class="col-4 col-sm-3 col-md-2 align-self-center">
-            <img src="img/logo.png" class="img-fluid" />
-         </div>
-				 <hgroup class="col">
-				    <h1>NuCamp</h1>
+					<div class="col-4 col-sm-3 col-md-2 align-self-center">
+						<img src="img/logo.png" class="img-fluid" />
+					</div>
+					<hgroup class="col">
+						<h1>NuCamp</h1>
 						<h2>a better way to camp</h2>
 					</hgroup>
 				</div>
 			</div>
 		</header>
 
-		<nav id="main-navigation" class="navbar navbar-expand-sm navbar-dark sticky-top" aria-label="Main navigation bar">
+		<nav
+			id="main-navigation"
+			class="navbar navbar-expand-sm navbar-dark sticky-top"
+			aria-label="Main navigation bar"
+		>
 			<div class="container">
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30" /></a>
+				<a class="navbar-brand" href="index.html"
+					><img src="img/logo.png" height="30" width="30"
+				/></a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -65,7 +80,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">
+							<a class="nav-link" href="index.html#sites">
 								<i class="fa fa-list fa-lg"></i>
 								Sites
 							</a>
@@ -86,10 +101,7 @@
 			<div class="row">
 				<div class="col">
 					<ol class="breadcrumb" role="navigation">
-						<li class="breadcrumb-item"><a href="index.html">
-							Home
-						</a>
-					</li>
+						<li class="breadcrumb-item"><a href="index.html"> Home </a></li>
 						<li class="breadcrumb-item active">
 							Contact
 							<span class="sr-only">(current)</span>
@@ -99,11 +111,13 @@
 					<hr />
 				</div>
 			</div>
-		
+
 			<div id="main-address" class="row row-content align-items-center">
 				<div class="col-sm-4">
 					<h5>Our Address</h5>
-					<address aria-label="1 nucamp way. Seattle Washington. 9 8 0 0 1. United States of America.">
+					<address
+						aria-label="1 nucamp way. Seattle Washington. 9 8 0 0 1. United States of America."
+					>
 						1 Nucamp Way<br />
 						Seattle, WA 98001<br />
 						U.S.A.
@@ -111,25 +125,22 @@
 				</div>
 
 				<div id="main-contact-links" class="">
-					<a 
-					aria-label="2 0 6. 5 5 5.1 2 3 4."
-					class="text-dark text-decoration-none" 
-					href="tel:+12065551234" 
-					 
+					<a
+						aria-label="2 0 6. 5 5 5.1 2 3 4."
+						class="text-dark text-decoration-none"
+						href="tel:+12065551234"
 					>
-						<i class="fa fa-phone"></i> 
+						<i class="fa fa-phone"></i>
 						&nbsp; +1 (206) 555-1234</a
-						>
-						<br />
-						<a
+					>
+					<br />
+					<a
 						aria-label="Contact nucampsites via email"
 						class="text-dark text-decoration-none"
 						href="mailto:campsites@nucamp.co"
-						
-						><i class="fa fa-envelope-o"></i>
-						&nbsp; campsites@nucamp.co</a>
+						><i class="fa fa-envelope-o"></i> &nbsp; campsites@nucamp.co</a
+					>
 				</div>
-
 			</div>
 			<div class="row row-content">
 				<div class="col-12">
@@ -144,7 +155,13 @@
 								First Name
 							</label>
 							<div class="col-md-10">
-								<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
+								<input
+									type="text"
+									class="form-control"
+									id="firstName"
+									name="firstName"
+									placeholder="First Name"
+								/>
 							</div>
 						</div>
 						<div class="form-group row">
@@ -152,42 +169,71 @@
 								Last Name
 							</label>
 							<div class="col-md-10">
-								<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+								<input
+									type="text"
+									class="form-control"
+									id="lastName"
+									name="lastName"
+									placeholder="Last Name"
+								/>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="areaCode" class="col-md-2 col-form-label">
 								Contact Tel.
-								</label>
+							</label>
 							<div class="col-5 col-md-3">
-								<input type="tel" class="form-control" id="areaCode" name="areaCode" placeholder="Area code" />
+								<input
+									type="tel"
+									class="form-control"
+									id="areaCode"
+									name="areaCode"
+									placeholder="Area code"
+								/>
 							</div>
 							<div class="col-7">
-								<input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
+								<input
+									type="tel"
+									class="form-control"
+									name="telNum"
+									placeholder="Tel. number"
+								/>
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="email" class="col-md-2 col-form-label">
-								Email
-							</label>
+							<label for="email" class="col-md-2 col-form-label"> Email </label>
 							<div class="col-md-10">
-								<input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+								<input
+									type="email"
+									class="form-control"
+									id="email"
+									name="email"
+									placeholder="Email"
+								/>
 							</div>
 						</div>
 						<div class="form-group row">
 							<div class="col offset-md-2">
 								May we contact you?
 								<div class="form-check form-check-inline">
-									<input type="radio" class="form-check-input" id="contactYes" name="contactRadios" value="yes" />
-									<label for="contactYes" class="form-check-label">
-										Yes
-									</label>
+									<input
+										type="radio"
+										class="form-check-input"
+										id="contactYes"
+										name="contactRadios"
+										value="yes"
+									/>
+									<label for="contactYes" class="form-check-label"> Yes </label>
 								</div>
 								<div class="form-check form-check-inline">
-									<input type="radio" class="form-check-input" id="contactNo" name="contactRadios" value="no" />
-									<label for="contactNo" class="form-check-label">
-										No
-									</label>
+									<input
+										type="radio"
+										class="form-check-input"
+										id="contactNo"
+										name="contactRadios"
+										value="no"
+									/>
+									<label for="contactNo" class="form-check-label"> No </label>
 								</div>
 							</div>
 						</div>
@@ -196,7 +242,12 @@
 								Your Feedback
 							</label>
 							<div class="col-md-10">
-								<textarea class="form-control" id="feedback" name="feedback" rows="8"></textarea>
+								<textarea
+									class="form-control"
+									id="feedback"
+									name="feedback"
+									rows="8"
+								></textarea>
 							</div>
 						</div>
 						<div class="form-group row">
@@ -208,79 +259,143 @@
 						</div>
 					</form>
 				</section>
-
 			</div>
 		</main>
 
 		<footer id="site-footer" class="site-footer">
 			<div class="container">
 				<div class="row">
-
 					<!-- Note about footer & "text-secondary": Since there's a nav element here, the current page text-primary and all other text-secondary to make it more clear which page you're on -->
-					<div id="footer-navigation" class="col-4 col-sm-2 offset-1" role="navigation">
+					<div
+						id="footer-navigation"
+						class="col-4 col-sm-2 offset-1"
+						role="navigation"
+					>
 						<h5>Links</h5>
 						<ul class="list-unstyled">
-							<li class=""><a href="index.html" class="text-secondary text-decoration-none">Home</a></li>
-							<li class=""><a href="aboutus.html" class="text-secondary text-decoration-none">About</a></li>
-							<li class=""><a href="#" class="text-secondary text-decoration-none">Sites</a></li>
-							<li class=""><a href="#" class=" text-decoration-none">Contact<span class="sr-only">(current)</span></a></li>
+							<li class="">
+								<a href="index.html" class="text-secondary text-decoration-none"
+									>Home</a
+								>
+							</li>
+							<li class="">
+								<a
+									href="aboutus.html"
+									class="text-secondary text-decoration-none"
+									>About</a
+								>
+							</li>
+							<li class="">
+								<a
+									href="index.html#sites"
+									class="text-secondary text-decoration-none"
+									>Sites</a
+								>
+							</li>
+							<li class="">
+								<a href="#" class="text-decoration-none"
+									>Contact<span class="sr-only">(current)</span></a
+								>
+							</li>
 						</ul>
 					</div>
 
-					<!-- Please excuse all my ARIA labels and http refs! -->
-					<div id="footer-social-media-site-links" class="col-6 col-sm-5 text-center">
+					<div
+						id="footer-social-media-site-links"
+						class="col-6 col-sm-5 text-center"
+					>
 						<h5>Social</h5>
 						<ul class="list-unstyled" role="navigation">
-							<a href="https://instagram.com/" class="btn btn-social-icon btn-instagram " target="_blank" aria-label="Link to nucamp instagram page (opens in new tab)" rel="external noopener noreferrer"><i class="fa fa-instagram"></i></a>
-							<a href="https://facebook.com/" class="btn btn-social-icon btn-facebook" target="_blank" aria-label="Link to nucamp facebook page (opens in new tab)" rel="external noopener noreferrer"><i class="fa fa-facebook"></i></a>
-							<a href="https://twitter.com/" target="_blank" class="btn btn-social-icon btn-twitter" aria-label="Link to nucamp twitter page (opens in new tab)" rel="external noopener noreferrer"><i class="fa fa-twitter"></i></a>
-							<!-- I used an alt icon for youtube since none of the other icons had any words, either -->
-							<a href="https://youtube.com/" target="_blank" class="btn btn-social-icon btn-google" aria-label="Link to nucamp youtube page (opens in new tab)" rel="external noopener noreferrer"><i class="fa fa-youtube-play"></i></a>
+							<a
+								href="https://instagram.com/"
+								class="btn btn-social-icon btn-instagram"
+								target="_blank"
+								aria-label="Link to nucamp instagram page (opens in new tab)"
+								rel="external noopener noreferrer"
+								><i class="fa fa-instagram"></i
+							></a>
+							<a
+								href="https://facebook.com/"
+								class="btn btn-social-icon btn-facebook"
+								target="_blank"
+								aria-label="Link to nucamp facebook page (opens in new tab)"
+								rel="external noopener noreferrer"
+								><i class="fa fa-facebook"></i
+							></a>
+							<a
+								href="https://twitter.com/"
+								target="_blank"
+								class="btn btn-social-icon btn-twitter"
+								aria-label="Link to nucamp twitter page (opens in new tab)"
+								rel="external noopener noreferrer"
+								><i class="fa fa-twitter"></i
+							></a>
+							<a
+								href="https://youtube.com/"
+								target="_blank"
+								class="btn btn-social-icon btn-google"
+								aria-label="Link to nucamp youtube page (opens in new tab)"
+								rel="external noopener noreferrer"
+								><i class="fa fa-youtube-play"></i
+							></a>
 						</ul>
 					</div>
 
 					<div id="footer-contact-links" class="col-sm-4 text-center">
-							<a 
+						<a
 							aria-label="2 0 6. 5 5 5.1 2 3 4."
-							class="btn btn-link text-secondary text-nowrap text-decoration-none" 
-							href="tel:+12065551234" 
-							role="button" 
-							>
-								<i class="fa fa-phone fa-lg text-primary"></i> 
-								&nbsp; +1 (206) 555-1234</a
-								>
-								<br />
-								<a
-								aria-label="Contact nucampsites via email"
-								class="btn btn-link text-secondary text-nowrap text-decoration-none"
-								href="mailto:campsites@nucamp.co"
-								role="button"
-								><i class="fa fa-envelope-o fa-lg text-primary"></i>
-								&nbsp; campsites@nucamp.co</a>
-            </div>
-          </div>
-        </div>
+							class="
+								btn btn-link
+								text-secondary text-nowrap text-decoration-none
+							"
+							href="tel:+12065551234"
+							role="button"
+						>
+							<i class="fa fa-phone fa-lg text-primary"></i>
+							&nbsp; +1 (206) 555-1234</a
+						>
+						<br />
+						<a
+							aria-label="Contact nucampsites via email"
+							class="
+								btn btn-link
+								text-secondary text-nowrap text-decoration-none
+							"
+							href="mailto:campsites@nucamp.co"
+							role="button"
+							><i class="fa fa-envelope-o fa-lg text-primary"></i> &nbsp;
+							campsites@nucamp.co</a
+						>
+					</div>
+				</div>
+			</div>
 
-      <!-- added copyright section for fun - hard to get centering just right.  I've built css grids for these in the past, but too much work for something not in the assignment -->
 			<div id="footer-site-copyright-info" class="container mt-3">
-					<div class="d-flex flex-column align-items-center">
-						<!-- align-self-center for footer? -->
-						<h5 class="copy-date">
-							<i class="fa fa-copyright copy-sign" aria-hidden="true"></i>&nbsp;
-							<span id="this-year"> 
-							</span>
-							<span id="this-second"> 
-							</span>
-						</div>
-					</h5>
+				<div class="d-flex flex-column align-items-center copy-block">
+					<!-- align-self-center for footer? -->
+					<div>
+						<i class="fa fa-copyright copy-sign" aria-hidden="true"></i>&nbsp;
+						<span id="this-year"> </span>
+						<span id="this-second"> </span>
+					</div>
+					<a href="http://www.wtfpl.net/"
+						><img
+							src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+							width="80"
+							height="15"
+							alt="WTFPL"
+						/>
+					</a>
+				</div>
 			</div>
 		</footer>
 
-
-		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+		<!-- build:js js/main.js -->
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<!-- <script src="node_modules/mdbootstrap/js/mdb.min.js"></script> -->
-    <script src="js/copyrightLogo.js" type="text/javascript"></script>
+		<script src="js/scripts.js"></script>
+		<script src="js/copyrightLogo.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>

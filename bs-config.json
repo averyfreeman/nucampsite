@@ -1,0 +1,10 @@
+{
+	"watch": true,
+	"baseDir": "/",
+	"directory": true,
+	"port": 8086,
+	"injectChanges": false,
+	"watchOptions": {
+		"ignored": ["node_modules", ".git"]
+	}
+}
