@@ -1,3 +1,6 @@
 dist
 .git
 node_modules
+*.tar.gz
+*.sh
+node-minifier.list

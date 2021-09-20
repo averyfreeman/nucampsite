@@ -3,6 +3,7 @@ $color-secondary: #5637dd;
 $color-pale: #cec8ff;
 $color-mid: #901cad;
 $color-dark: #60106b;
+$color-teal: #17a2b8;
 $color-black-translucent: #00000055;
 $color-play-button-border-dark: rgb(99, 66, 66);
 $color-play-button-border-light: rgb(156, 99, 99);
@@ -15,7 +16,8 @@ $shrink: scale(0.95);
 $fast-transition: all 0.5s ease;
 $slow-transition: all 2s ease;
 
-// $see-through-a-little: opacity
+@import 'lobster.scss';
+@import 'open-sans.scss';
 
 $font-body: 'Open Sans', sans-serif;
 $font-header: 'Lobster', cursive;
@@ -63,13 +65,11 @@ header {
 }
 
 #carouselButton > i {
-	// text-shadow: 3px 3px 6px;
 	transition: $fast-transition;
 }
 
 #carouselButton:hover {
 	text-shadow: inset 3px 3px 6px black;
-	// text-shadow: inset 3px 3px 6px #33333399;
 	opacity: 0.9;
 	transform: $shrink;
 }
@@ -140,5 +140,23 @@ header {
 	}
 	to {
 		transform: rotate(360deg);
+	}
+}
+
+#reserveModal {
+	.modal-header {
+		background-color: $color-teal;
+		h3 {
+			color: white;
+		}
+	}
+}
+
+#loginModal {
+	.modal-header {
+		background-color: $color-mid;
+		h3 {
+			color: white;
+		}
 	}
 }

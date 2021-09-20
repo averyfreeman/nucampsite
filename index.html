@@ -6,13 +6,27 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
-		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="img/favicon-32x32.png"
+			sizes="32x32"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="img/favicon-16x16.png"
+			sizes="16x16"
+		/>
 
 		<!-- build:css css/main.css -->
 		<link
 			rel="stylesheet"
 			href="node_modules/bootstrap/dist/css/bootstrap.min.css"
 		/>
+		<link rel="stylesheet" href="css/_lobster.css" />
+		<link rel="stylesheet" href="css/_open-sans.css" />
 		<link
 			rel="stylesheet"
 			href="node_modules/font-awesome/css/font-awesome.min.css"
@@ -24,10 +38,6 @@
 		<link rel="stylesheet" href="css/styles.css" />
 		<!-- endbuild -->
 
-		<link
-			href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap"
-			rel="stylesheet"
-		/>
 		<title>NuCamp: A Better Way To Camp</title>
 	</head>
 	<body>
@@ -43,7 +53,7 @@
 						<h1>NuCamp</h1>
 						<h2>a better way to camp</h2>
 					</hgroup>
-					<!-- I thought this centered the button better at xs -->
+
 					<div
 						class="
 							mt-5
@@ -54,32 +64,20 @@
 							justify-content-md-end justify-content-center
 						"
 					>
-						<!-- <div class="row"> -->
-						<!-- <div class="col"> -->
-						<a
-							id="reserveButton"
-							class="btn btn-lg btn-info"
-							role="button"
-							data-toggle="modal"
-							data-target="#reserveModal"
+						<a id="reserveButton" class="btn btn-lg btn-info" role="button"
 							>Reserve Campsite</a
 						>
-
-						<!-- </div> -->
 					</div>
 				</div>
 			</div>
 		</header>
 
-		<!-- #region reserveModal -->
 		<div id="reserveModal" class="modal fade" role="dialog">
 			<div class="modal-dialog modal-lg" role="document">
 				<div class="modal-content">
-					<div class="modal-header bg-info text-white">
+					<div class="modal-header">
 						<h3 class="modal-title">Reserve a Campsite</h3>
-						<button type="button" class="close" data-dismiss="modal">
-							&times;
-						</button>
+						<button type="button" class="btn-close close">&times;</button>
 					</div>
 					<div class="modal-body">
 						<div class="container-fluid">
@@ -123,7 +121,6 @@
 									<div
 										class="col-2 btn-group btn-group-toggle"
 										data-toggle="buttons"
-										id="siteTypeToggler"
 									>
 										<label for="siteTent" class="btn btn-success active">
 											<input
@@ -149,9 +146,7 @@
 
 								<div class="form-group row">
 									<div class="col">
-										<button class="btn btn-secondary" data-dismiss="modal">
-											Cancel
-										</button>
+										<button class="btn btn-secondary btn-close">Cancel</button>
 										<button class="btn btn-primary" type="submit" for="#search">
 											Search
 										</button>
@@ -170,7 +165,7 @@
 			aria-label="Main navigation bar"
 		>
 			<div class="container">
-				<a class="navbar-brand" href="#sites"
+				<a class="navbar-brand" href="#"
 					><img src="img/logo.png" height="30" alt="nucampsite logo" width="30"
 				/></a>
 				<button
@@ -209,7 +204,7 @@
 						</li>
 					</ul>
 					<span class="navbar-text ml-auto">
-						<a role="button" data-toggle="modal" data-target="#loginModal">
+						<a role="button" id="loginButton">
 							<i class="fa fa-sign-in"></i> Login
 						</a>
 					</span>
@@ -222,9 +217,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h3 class="modal-title">Login</h3>
-						<button type="button" class="close" data-dismiss="modal">
-							&times;
-						</button>
+						<button type="button" class="btn-close close">&times;</button>
 					</div>
 					<div class="modal-body">
 						<div class="container-fluid">
@@ -260,8 +253,7 @@
 								<div class="form-row">
 									<button
 										type="button"
-										class="btn btn-secondary btn-sm ml-auto"
-										data-dismiss="modal"
+										class="btn btn-secondary btn-sm btn-close ml-auto"
 									>
 										Cancel
 									</button>
@@ -276,7 +268,7 @@
 			</div>
 		</div>
 
-		<main class="container" id="sites">
+		<main class="container">
 			<div class="row row-content">
 				<div class="col-md-8 mx-auto">
 					<div
@@ -439,7 +431,6 @@
 		<footer id="site-footer" class="site-footer">
 			<div class="container">
 				<div class="row">
-					<!-- Note about footer: Since there's a nav element here, the current page page is primary while all other text is secondary -->
 					<div
 						id="footer-navigation"
 						class="col-4 col-sm-2 offset-1"
@@ -460,7 +451,7 @@
 								>
 							</li>
 							<li class="">
-								<a href="#sites" class="text-secondary text-decoration-none"
+								<a href="#" class="text-secondary text-decoration-none"
 									>Sites</a
 								>
 							</li>
@@ -474,7 +465,6 @@
 						</ul>
 					</div>
 
-					<!-- Please excuse all my ARIA labels and http refs! -->
 					<div
 						id="footer-social-media-site-links"
 						class="col-6 col-sm-5 text-center"
@@ -505,7 +495,7 @@
 								rel="external noopener noreferrer"
 								><i class="fa fa-twitter"></i
 							></a>
-							<!-- I used an alt icon for youtube since none of the other icons had any words, either -->
+
 							<a
 								href="https://youtube.com/"
 								target="_blank"
@@ -546,7 +536,6 @@
 				</div>
 			</div>
 
-			<!-- added copyright section for fun - hard to get centering just right.  I've built css grids for these in the past, but too much work for something not in the assignment -->
 			<div id="footer-site-copyright-info" class="container mt-3">
 				<div class="d-flex flex-column align-items-center copy-block">
 					<!-- align-self-center for footer? -->

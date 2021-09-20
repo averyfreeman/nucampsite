@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lobster.woff") format("woff"), url("../fonts/lobster.ttf") format("truetype"), url("https://fonts.gstatic.com/s/lobster/v23/neILzCirqoswsqX9_oU.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lobster.woff") format("woff"), url("../fonts/lobster.ttf") format("truetype"), url("https://fonts.gstatic.com/s/lobster/v23/neILzCirqoswsqX9_oU.ttf") format("truetype"); }
+
+/*# sourceMappingURL=_open-sans.scss.map */
 body {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
@@ -88,3 +101,17 @@ header h2 {
     transform: rotate(0); }
   to {
     transform: rotate(360deg); } }
+
+#reserveModal .modal-header {
+  background-color: #17a2b8; }
+
+#reserveModal .modal-header h3 {
+  color: white; }
+
+#loginModal .modal-header {
+  background-color: #901cad; }
+
+#loginModal .modal-header h3 {
+  color: white; }
+
+/*# sourceMappingURL=styles.css.map */

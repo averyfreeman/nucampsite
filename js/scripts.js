@@ -1,28 +1,38 @@
 window.$ = $;
 
-// $(document).onReady(function () {
-// 	console.log(this, 'ready');
-// });
-
 $.when($.ready).then(function () {
-	console.log(this, Popper, '$ is ready');
+	// console.log(this, Popper, '$ is ready');
 });
 
-$('#reserveModal').on('shown.bs.modal', function () {
-	$('#reserveButton').trigger('focus');
+$('#reserveButton').on('click', function () {
+	$('#reserveModal').modal('show');
 });
 
-// ('node_modules/bootstrap/js/dist/button.js');
+$('#loginButton').on('click', function () {
+	$('#loginModal').modal('show');
+});
+
+// this works, but API manual recommended pure css selector: https://api.jquery.com/button-selector/
+// so I added a new class to all the close/cancel buttons
+// Also, these selectors triggered multiple console.logs:
+// $(':button.close, :contains(Cancel)').on('click', function (e) {
+$('.btn-close').on('click', function (e) {
+	e.preventDefault();
+	// console.log('closing...');
+	$('.modal').modal('hide');
+});
+
 $('.btn-group-toggle').button('toggle');
-$('button[for="#search"]').click(function (e) {
+
+$('button[for="#search"]').on('click', function (e) {
 	e.preventDefault();
 	console.log('searching...');
-	$('#reserveModal').modal('toggle');
+	$('#reserveModal').modal('hide');
 });
 
 $(function () {
 	$('.carousel').carousel({ interval: 2000, pause: 'false' });
-	$('#carouselButton').click(function () {
+	$('#carouselButton').on('click', function () {
 		if ($('#carouselButton').children('i').hasClass('fa-pause')) {
 			$('.carousel').carousel('pause');
 			$('#carouselButton').children('i').removeClass('fa-pause');
@@ -37,8 +47,3 @@ $(function () {
 		$('.carousel').carousel('cycle');
 	});
 });
-// every clicked button gets an active class!!!
-// $('.btn').on('click', function () {
-//   $(this).siblings('label').removeClass('active');
-//   $(this).addClass('active');
-// });

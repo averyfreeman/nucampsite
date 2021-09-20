@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "_open-sans.css",
+	"sources": [
+		"_open-sans.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,UAAU;EACT,WAAW,EAAE,SAAS;EACtB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,GAAG,EAAE,4BAA4B,CAAC,cAAc,EAC/C,2BAA2B,CAAC,kBAAkB,EAC9C,sEAAsE,CACrE,kBAAkB;;;AAGrB,2CAA2C"
+}
